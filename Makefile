@@ -29,7 +29,7 @@ bench-naive: benchmark.o sgemm-naive.o
 
 # your implementation for part 1
 bench-small: benchmark.o sgemm-small.o
-	$(CC) -o $@ $(LIBS) benchmark.o sgemm-small.o $(GOTOLIB)
+	$(CC) -O3 -o $@ $(LIBS) benchmark.o sgemm-small.o $(GOTOLIB)
 # your implementation for part 2
 bench-openmp: benchmark.o sgemm-openmp.o
 	$(CC) -o $@ $(LIBS) $(OMP) benchmark.o sgemm-openmp.o $(GOTOLIB)
