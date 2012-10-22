@@ -227,6 +227,7 @@ void sgemm( int m, int n, float *A, float *C ){
             i+=4;
         }
         
+        //Remaining non multiples of 4
         for (i = i; i < m; i++){
             for (k = 0; k < n; k++){
                 C[i + j * m] += A[i + k * m] * A[j + k * m];
